@@ -1,0 +1,30 @@
+{
+    "name": "Andrew Kolasko App",
+    "short_name": "Andrew Kolasko App",
+    "description": "Andrew Kolasko App",
+    "manifest_version": "1.0",
+    "icons": [
+        {
+            "src": "./images/logo144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./images/logo192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./images/logo512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}

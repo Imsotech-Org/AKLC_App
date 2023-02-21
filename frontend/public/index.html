@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="./images/logo512x512.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="PWA Pokemon application"/>
+    <link rel="apple-touch-icon" href="./images/logo512x512.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Andrew Kolasko App</title>
+
+    <style>
+      .installContainer {
+        background-color: rgb(248, 250, 252);
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        bottom: 0;
+        height: 100px;
+        padding: 2rem;
+        box-shadow: -2px -2px 200px black;
+      }
+      .installBtn {
+        border: none;
+        background-color: dodgerblue;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 8rem;
+        cursor: pointer;
+      }
+      .installBtn:hover {
+        transform: scale(105%);
+      }
+      .installBtnHidden {
+        display: none;
+      }
+    </style>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <div class="installContainer" id="installContainer">
+      <h2>Install App to Home Screen</h2>
+      <button class="installBtn" id="installButton">Install</button>
+    </div> -->
+    <div id="root"></div>
+    <script>
+      if('serviceWorker' in navigator){
+
+
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("./serviceworker.js")
+            .then((reg) => {
+              console.log("Success", reg.scope);
+            })
+            .catch((err) => console.log("Failure: ", err));
+        })
+      }
+    </script>
+  </body>
+</html>
