@@ -21,7 +21,7 @@ const AdminPannel = () => {
     }, []);
 
   return (
-    <div>
+    <div className="containerBasic">
         <button onClick={() => navigate('/')}><SlArrowLeft/></button>
         <h1>Admin Panel</h1>
         <p>Create News Feed</p>

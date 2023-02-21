@@ -8,7 +8,7 @@ const CreateNewsFeed = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="containerBasic">
       <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
       <p>Create News Feed</p>
 

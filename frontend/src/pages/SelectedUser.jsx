@@ -28,7 +28,7 @@ const SelectedUser = () => {
 }, []);
 
   return (
-    <div>
+    <div className="containerBasic">
       <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
       <p>Selected User: {selectedUser.name}</p>
       <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button>

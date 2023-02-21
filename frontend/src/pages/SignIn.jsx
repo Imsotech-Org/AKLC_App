@@ -55,7 +55,7 @@ const SignIn = () => {
   }
 
   return (
-    <div>
+    <div className="containerBasic">
         <h1>Sign In</h1>
         <form onSubmit={onSubmit}>
             <label htmlFor="email">

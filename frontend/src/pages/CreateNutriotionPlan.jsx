@@ -8,7 +8,7 @@ const CreateNutriotionPlan = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="containerBasic">
       <button onClick={() => navigate(`/selected-user/${id}`)}><SlArrowLeft/></button>
 
       <h1>CreateNutritionPlan</h1>
