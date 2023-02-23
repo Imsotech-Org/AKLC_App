@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAll } from '../features/auth/authSlice';
 import {SlArrowLeft} from 'react-icons/sl';
+import Topbar from '../components/Topbar';
 
 const SelectedUser = () => {
 
@@ -28,12 +29,15 @@ const SelectedUser = () => {
 }, []);
 
   return (
+    <>
+    <Topbar text={"Client: " + selectedUser.name} />
     <div className="containerBasic">
       <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
       <p>Selected User: {selectedUser.name}</p>
       <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button>
       <button onClick={() => navigate(`/create-wourkout/${id}`)}>Create Workout Plan</button>
     </div>
+    </>
   )
 }
 

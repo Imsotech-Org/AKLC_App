@@ -10,7 +10,7 @@ import {useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {SlArrowLeft} from 'react-icons/sl';
 
-const Topbar = (props) => {
+const TopbarAlt = (props) => {
 
     const {user} = useSelector((state) => state.auth);
     const navigate = useNavigate();
@@ -23,6 +23,7 @@ const Topbar = (props) => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{backgroundColor: '#879635'}}>
         <Toolbar>
+          {/*
           <IconButton
             size="large"
             edge="start"
@@ -31,6 +32,7 @@ const Topbar = (props) => {
             sx={{ mr: 2 }}
             onClick={() => navigate('/')}
           >
+          */}
             <SlArrowLeft/>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -42,4 +44,4 @@ const Topbar = (props) => {
   )
 }
 
-export default Topbar
+export default TopbarAlt

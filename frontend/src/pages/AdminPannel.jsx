@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAll } from '../features/auth/authSlice';
 import {SlArrowLeft} from 'react-icons/sl';
+import Topbar from '../components/Topbar';
 
 const AdminPannel = () => {
 
@@ -21,6 +22,8 @@ const AdminPannel = () => {
     }, []);
 
   return (
+    <>
+    <Topbar text="Admin Dashboard"/>
     <div className="containerBasic">
         <button onClick={() => navigate('/')}><SlArrowLeft/></button>
         <h1>Admin Panel</h1>
@@ -39,6 +42,7 @@ const AdminPannel = () => {
             }
         </ul>
     </div>
+    </>
   )
 }
 

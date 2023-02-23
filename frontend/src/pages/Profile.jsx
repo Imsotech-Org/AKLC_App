@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signOff, reset } from '../features/auth/authSlice';
 import {getProgram} from '../features/programs/programsSlice';
+import Topbar from '../components/Topbar';
 
 const Profile = () => {
     const [calledOnce, setCalledOnce] = useState(false);
@@ -27,6 +28,8 @@ const Profile = () => {
     }
 
   return (
+    <>
+    <Topbar text="My Profile"/>
     <div className="containerBasic">
         <h1>Profile</h1>
         <p>User Name:</p>
@@ -40,6 +43,7 @@ const Profile = () => {
           user.isAdmin && <button onClick={() => navigate('/admin-pannel')}>Admin Pannel</button>
         }
     </div>
+    </>
   )
 }
 

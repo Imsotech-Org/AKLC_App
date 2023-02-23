@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {SlArrowLeft} from 'react-icons/sl';
+import Topbar from '../components/Topbar';
 
 const CreateWorkoutPlan = () => {
 
@@ -8,6 +9,8 @@ const CreateWorkoutPlan = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Topbar text="Create Workout Plan"/>
     <div className="containerBasic">
       <button onClick={() => navigate(`/selected-user/${id}`)}><SlArrowLeft/></button>
       <h1>CreateWorkoutPlan</h1>
@@ -28,6 +31,7 @@ const CreateWorkoutPlan = () => {
       <h1>Previous Workout Plans:</h1>
 
     </div>
+    </>
   )
 }
 

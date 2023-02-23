@@ -3,6 +3,7 @@ import React from 'react';
 import {useNavigate } from 'react-router-dom';
 import fitnessIcon from '../assets/icons-logos/fitness-icon.png';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
+import Topbar from '../components/Topbar';
 
 const Plans = () => {
 
@@ -15,8 +16,8 @@ const Plans = () => {
   }
 
   return (
-    <div>
-
+    <>
+    <Topbar text="My A+ Game"/>
     <div className="containerBasic">
       
       <div>Plans</div>
@@ -33,7 +34,7 @@ const Plans = () => {
 
     </div>
 
-    </div>
+    </>
   )
 }
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import {useNavigate } from 'react-router-dom';
+import Topbar from '../components/Topbar';
 
 const UserWorkouts = () => {
   return (
-
+    <>
+    <Topbar text="My Workout Strategy"/>
     <div className="containerBasic">
         <div>UserWorkouts</div>
 
@@ -38,6 +40,7 @@ const UserWorkouts = () => {
     
     
     </div>
+    </>
   )
 }
 

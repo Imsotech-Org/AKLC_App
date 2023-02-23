@@ -22,7 +22,7 @@ function App() {
     <>
       <Router>
         <div className='container'>
-          <Topbar/>
+          {/*<Topbar/>*/}
           <Routes>
             <Route path='/signIn' element={<SignIn/>}/>      
 

@@ -2,12 +2,15 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {SlArrowLeft} from 'react-icons/sl';
 import {BsImageFill} from 'react-icons/bs';
+import Topbar from '../components/Topbar';
 
 const CreateNewsFeed = () => {
 
   const navigate = useNavigate();
 
   return (
+    <>
+    <Topbar text="Create Post"/>
     <div className="containerBasic">
       <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
       <p>Create News Feed</p>
@@ -28,6 +31,7 @@ const CreateNewsFeed = () => {
 
       <p>Previous Posts</p>
     </div>
+    </>
   )
 }
 
