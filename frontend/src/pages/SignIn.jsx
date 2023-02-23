@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { signIn, signOff, reset } from '../features/auth/authSlice';
+import logo from '../assets/icons-logos/logo-big-first.png';
 
 const SignIn = () => {
 
@@ -56,17 +57,21 @@ const SignIn = () => {
 
   return (
     <div className="containerBasic">
-        <h1>Sign In</h1>
-        <form onSubmit={onSubmit}>
+        <div style={{marginTop: '6rem', marginBottom: '6rem'}}>
+          <img src={logo} alt='Andrew Kolasko Life Center'  style={{width: '55%', color: 'purple'}} />
+        </div>
+        
+        <h1>Sign In</h1><br />
+        <form style={{textAlign: 'left'}} onSubmit={onSubmit}>
             <label htmlFor="email">
-                Email:<br />
-                <input type="email" name="email" id="email" value={email} onChange={onChange}/>
-            </label><br />
+                Email:<br /><br />
+                <input type="email" name="email" id="email" className="inputLogin" value={email} onChange={onChange}/>
+            </label><br /><br />
             <label htmlFor="password">
-                Password:<br />
-                <input type="password" name="password" id="password" value={password} onChange={onChange} />
-            </label><br />
-            <button>Sign In</button>
+                Password:<br /><br />
+                <input type="password" name="password" id="password" className="inputLogin" value={password} onChange={onChange} />
+            </label><br /><br /><br />
+            <button className="signInButton">Sign In</button>
         </form>
     </div>
   )

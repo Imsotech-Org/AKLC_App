@@ -7,7 +7,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
-import Topbar from '../components/Topbar';
+import TopbarUser from '../components/TopbarUser';
 
 
 const UserNutrition = () => {
@@ -23,7 +23,7 @@ const UserNutrition = () => {
 
   return (
     <>
-    <Topbar text="My Nutrition Strategy"/>
+    <TopbarUser text="My Nutrition Strategy"/>
     <div className="containerBasic">
     <div>upper navbar</div>
 

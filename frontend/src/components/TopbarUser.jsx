@@ -10,7 +10,7 @@ import {useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {SlArrowLeft} from 'react-icons/sl';
 
-const Topbar = (props) => {
+const TopbarUser = (props) => {
 
     const {user} = useSelector((state) => state.auth);
     const navigate = useNavigate();
@@ -29,7 +29,7 @@ const Topbar = (props) => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/plans')}
           >
             <SlArrowLeft/>
           </IconButton>
@@ -42,4 +42,4 @@ const Topbar = (props) => {
   )
 }
 
-export default Topbar
+export default TopbarUser

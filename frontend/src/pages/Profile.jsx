@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signOff, reset } from '../features/auth/authSlice';
 import {getProgram} from '../features/programs/programsSlice';
-import Topbar from '../components/Topbar';
+import TopbarAlt from '../components/TopbarAlt';
 
 const Profile = () => {
     const [calledOnce, setCalledOnce] = useState(false);
@@ -27,13 +27,25 @@ const Profile = () => {
       navigate('/signIn');
     }
 
+//obs:
+
   return (
     <>
-    <Topbar text="My Profile"/>
+    <TopbarAlt text="My Profile"/>
     <div className="containerBasic">
-        <h1>Profile</h1>
-        <p>User Name:</p>
-        <h3>{user.name}</h3>
+        <div className='row'>
+
+          <div className='col ProfilePicture'>
+
+          </div>
+          <div className='col ProfileHeader'>
+            <h1>Profile</h1>
+            <p>User Name:</p>
+            <h3>{user.name}</h3>
+          </div>
+          
+        </div>
+        
         <p>User Email: </p>
         <h3>{user.email}</h3>
         <p>User Plan:</p>

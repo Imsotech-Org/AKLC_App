@@ -3,7 +3,7 @@ import React from 'react';
 import {useNavigate } from 'react-router-dom';
 import fitnessIcon from '../assets/icons-logos/fitness-icon.png';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
-import Topbar from '../components/Topbar';
+import TopbarAlt from '../components/TopbarAlt';
 
 const Plans = () => {
 
@@ -17,7 +17,7 @@ const Plans = () => {
 
   return (
     <>
-    <Topbar text="My A+ Game"/>
+    <TopbarAlt text="My A+ Game"/>
     <div className="containerBasic">
       
       <div>Plans</div>

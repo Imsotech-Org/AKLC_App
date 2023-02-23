@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import {SlArrowLeft} from 'react-icons/sl';
+
 
 const TopbarAlt = (props) => {
 
@@ -22,19 +22,9 @@ const TopbarAlt = (props) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{backgroundColor: '#879635'}}>
-        <Toolbar>
-          {/*
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={() => navigate('/')}
-          >
-          */}
-            <SlArrowLeft/>
-          </IconButton>
+        <Toolbar style={{textAlign: 'center'}}>
+          
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {props.text}
           </Typography>

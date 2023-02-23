@@ -45,3 +45,27 @@
   position: relative;
   overflow: hidden;
 }
+
+.inputLogin {
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 0px solid lightgray;
+  background-color: lightgray;
+  width: 11rem;
+}
+
+.inputGeneral {
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 2px solid lightgray;
+  background-color: lightgray;
+
+}
+
+.signInButton {
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 0px solid lightgray;
+  background-color: #502C49;
+  width: 12rem;
+}

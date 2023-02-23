@@ -15,14 +15,12 @@ import CreateNutriotionPlan from './pages/CreateNutriotionPlan';
 import CreateWorkoutPlan from './pages/CreateWorkoutPlan';
 import UserNutrition from './pages/UserNutrition';
 import UserWorkouts from './pages/UserWorkouts';
-import Topbar from './components/Topbar';
 
 function App() {
   return (
     <>
       <Router>
         <div className='container'>
-          {/*<Topbar/>*/}
           <Routes>
             <Route path='/signIn' element={<SignIn/>}/>      
 
