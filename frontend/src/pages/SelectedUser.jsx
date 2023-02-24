@@ -30,12 +30,14 @@ const SelectedUser = () => {
 
   return (
     <>
-    <Topbar text={"Client: " + selectedUser.name} />
+    <Topbar text={"Client: " + selectedUser.name} backpage="/admin-pannel"/>
     <div className="containerBasic">
-      <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
+    
       <p>Selected User: {selectedUser.name}</p>
-      <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button>
+      
       <button onClick={() => navigate(`/create-wourkout/${id}`)}>Create Workout Plan</button>
+      <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button>
+      <button onClick={() => navigate(`/create-goals/${id}`)}>Create Client Goals</button>
     </div>
     </>
   )

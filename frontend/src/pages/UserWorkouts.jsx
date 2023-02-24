@@ -1,11 +1,11 @@
 import React from 'react';
 import {useNavigate } from 'react-router-dom';
-import TopbarUser from '../components/TopbarUser';
+import Topbar from '../components/Topbar';
 
 const UserWorkouts = () => {
   return (
     <>
-    <TopbarUser text="My Workout Strategy"/>
+    <Topbar text="My Workout Strategy" backpage="/plans"/>
     <div className="containerBasic">
         <div>UserWorkouts</div>
 

@@ -23,12 +23,12 @@ const AdminPannel = () => {
 
   return (
     <>
-    <Topbar text="Admin Dashboard"/>
+    <Topbar text="Admin Dashboard" backpage="/"/>
     <div className="containerBasic">
-        <button onClick={() => navigate('/')}><SlArrowLeft/></button>
+        {/*<button onClick={() => navigate('/')}><SlArrowLeft/></button>*/}
         <h1>Admin Panel</h1>
         <p>Create News Feed</p>
-        <button onClick={() => navigate('/create-news')}>New Feed</button>
+        <button onClick={() => navigate("/create-news")}>New Feed</button>
         <p>Show All users that have plans</p>
         <ul>
             {

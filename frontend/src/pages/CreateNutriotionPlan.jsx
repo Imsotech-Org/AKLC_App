@@ -10,26 +10,27 @@ const CreateNutriotionPlan = () => {
 
   return (
     <>
-    <Topbar text="Create Nutrition Plan"/>
+    <Topbar text="Client Nutrition Plan" backpage={`/selected-user/${id}`}/>
     <div className="containerBasic">
-      <button onClick={() => navigate(`/selected-user/${id}`)}><SlArrowLeft/></button>
 
-      <h1>CreateNutritionPlan</h1>
+      <h1>Create Nutrition Plan</h1>
 
       <form>
-        <label htmlFor="title">
-          Title:<br />
-          <input type="text" name="title" id="title" />
+       <label htmlFor="overview">
+          Overview:<br />
+          <textarea name="overview" id="overview" style={{width: '90%'}} className='inputGeneral' rows="10"></textarea>
         </label><br />
-        <label htmlFor="description">
-          Description:<br />
-          <textarea name="description" id="description" style={{width: '100%'}} rows="10"></textarea>
+
+        <label htmlFor="schedule">
+          Schedule:<br />
+          <textarea name="schedule" id="schedule" style={{width: '90%'}} className='inputGeneral' rows="10"></textarea>
         </label><br />
+
         <input type="datetime" name="datePlan" id="datePlan" hidden />
-        <button>Post</button>
+
+        <button>Complete and Submit</button>
       </form>
 
-      <h1>Previous Nutrition Plans:</h1>
     </div>
     </>
   )

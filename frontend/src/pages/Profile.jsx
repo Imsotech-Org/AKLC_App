@@ -3,7 +3,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signOff, reset } from '../features/auth/authSlice';
 import {getProgram} from '../features/programs/programsSlice';
-import TopbarAlt from '../components/TopbarAlt';
+import Topbar from '../components/Topbar';
+import {FaUserCircle} from 'react-icons/fa';
 
 const Profile = () => {
     const [calledOnce, setCalledOnce] = useState(false);
@@ -31,21 +32,21 @@ const Profile = () => {
 
   return (
     <>
-    <TopbarAlt text="My Profile"/>
+    <Topbar text="My Profile"/>
     <div className="containerBasic">
-        <div className='row'>
+        <div style={{display: 'inline-block'}}>
 
-          <div className='col ProfilePicture'>
-
+          <div >
+          <FaUserCircle className='col profilePicture'/>
           </div>
           <div className='col ProfileHeader'>
-            <h1>Profile</h1>
             <p>User Name:</p>
             <h3>{user.name}</h3>
           </div>
           
         </div>
         
+
         <p>User Email: </p>
         <h3>{user.email}</h3>
         <p>User Plan:</p>
@@ -54,6 +55,9 @@ const Profile = () => {
         {
           user.isAdmin && <button onClick={() => navigate('/admin-pannel')}>Admin Pannel</button>
         }
+        <br/>
+        <p>Health Goals</p>
+
     </div>
     </>
   )

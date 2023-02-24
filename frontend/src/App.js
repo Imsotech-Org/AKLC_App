@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute';
 import SelectedUser from './pages/SelectedUser';
 import CreateNutriotionPlan from './pages/CreateNutriotionPlan';
 import CreateWorkoutPlan from './pages/CreateWorkoutPlan';
+import CreateGoals from './pages/CreateGoals';
 import UserNutrition from './pages/UserNutrition';
 import UserWorkouts from './pages/UserWorkouts';
 
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route path='/create-wourkout/:id' element={<PrivateRoute/>}>
               <Route path='/create-wourkout/:id' element={<CreateWorkoutPlan/>}/>
+            </Route>
+            <Route path='/create-goals/:id' element={<PrivateRoute/>}>
+              <Route path='/create-goals/:id' element={<CreateGoals/>}/>
             </Route>
 
             <Route path='/user-nutrition/' element={<PrivateRoute/>}>

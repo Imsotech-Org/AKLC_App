@@ -10,7 +10,7 @@ const CreateNewsFeed = () => {
 
   return (
     <>
-    <Topbar text="Create Post"/>
+    <Topbar text="Create Post" backpage="/admin-pannel"/>
     <div className="containerBasic">
       <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
       <p>Create News Feed</p>

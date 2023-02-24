@@ -1,10 +1,10 @@
 import React from 'react'
-import TopbarAlt from '../components/TopbarAlt';
+import Topbar from '../components/Topbar';
 
 const News = () => {
   return (
     <>
-    <TopbarAlt text="My Resources"/>
+    <Topbar text="My Resources"/>
     <div>News</div>
     </>
   )

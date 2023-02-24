@@ -19,6 +19,11 @@ const Topbar = (props) => {
         return <></>
     }
 
+    if (props.backpage === 'menu') {
+        
+    }
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{backgroundColor: '#879635'}}>
@@ -29,7 +34,7 @@ const Topbar = (props) => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => navigate('/')}
+            onClick={() => navigate(props.backpage)}
           >
             <SlArrowLeft/>
           </IconButton>

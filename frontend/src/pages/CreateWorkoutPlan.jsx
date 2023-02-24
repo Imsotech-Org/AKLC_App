@@ -10,25 +10,40 @@ const CreateWorkoutPlan = () => {
 
   return (
     <>
-    <Topbar text="Create Workout Plan"/>
-    <div className="containerBasic">
-      <button onClick={() => navigate(`/selected-user/${id}`)}><SlArrowLeft/></button>
-      <h1>CreateWorkoutPlan</h1>
+    <Topbar text="Client Workout Plan" backpage={`/selected-user/${id}`}/>
+    <div>
+      <br/>
+      <h1>Custom Workout Entry:</h1>
 
       <form>
+        <label for="weekday">Select Day: </label>
+         <select id="weekday" name="weekday">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wedenesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+         </select>
+
+        <br/><br/>
         <label htmlFor="title">
-          Title:<br />
-          <input type="text" name="title" id="title" />
-        </label><br />
+          Workout Overview: <br/>
+          <input type="text" name="title" id="title" style={{width: '90%'}} className='inputGeneral'/>
+        </label>
+        
+        <br/><br/>
         <label htmlFor="description">
           Description:<br />
-          <textarea name="description" id="description" style={{width: '100%'}} rows="10"></textarea>
+          <textarea name="description" id="description" style={{width: '90%'}} className='inputGeneral' rows="10"></textarea>
         </label><br />
-        <input type="datetime" name="datePlan" id="datePlan" hidden />
-        <button>Post</button>
+        
+        <input type="datetime" name="datePlan" id="datePlan"  hidden/>
+        
+        <br/>
+        <button>Complete and Submit</button>
       </form>
-
-      <h1>Previous Workout Plans:</h1>
 
     </div>
     </>
