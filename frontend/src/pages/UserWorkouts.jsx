@@ -7,7 +7,6 @@ const UserWorkouts = () => {
     <>
     <Topbar text="My Workout Strategy" backpage="/plans"/>
     <div className="containerBasic">
-        <div>UserWorkouts</div>
 
       <div className="workoutCard">
         <h3>Monday</h3>

@@ -25,7 +25,6 @@ const UserNutrition = () => {
     <>
     <Topbar text="My Nutrition Strategy" backpage="/plans"/>
     <div className="containerBasic">
-    <div>upper navbar</div>
 
     <div>
       <img src={nutritionIcon} alt='Nutrition Icon' style={{width: 300, height: 300, }} />
