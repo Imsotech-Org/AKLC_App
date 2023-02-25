@@ -3,7 +3,7 @@ import newsService from './newsService';
 
 const initialState = {
     news: [],
-    newsSingle: {},
+    singleNews: {},
     isErrorNews: false,
     isSuccessNews: false,
     isLoading: false,
