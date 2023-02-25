@@ -12,7 +12,7 @@ const workoutPlanSchema = mongoose.Schema(
             required: [true, "Please add a title for Work Plan"],
         },
         description: {
-            true: String,
+            type: String,
             require: [true, "Please add a description for Work Plan"]
         }
     },

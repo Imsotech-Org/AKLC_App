@@ -26,12 +26,14 @@ const News = () => {
   return (
     <>
     <Topbar text="My Resources"/>
+    <div className="containerBasic">
     {
-      news.map((item) => {return (<div>
-        <h1>{item.title}</h1>
+      news.map((item) => {return (<div className='card'>
+        <h3>{item.title}</h3>
         <p>{item.description}</p>
       </div>);})
     }
+    </div>
     </>
   )
 }

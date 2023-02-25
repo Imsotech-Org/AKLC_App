@@ -16,7 +16,7 @@ const getNews = asyncHandler(async (req, res) => {
 // @route GET /api/v1/news/:id
 // @access Public
 
-const getNew = asyncHandler(async (req, res) => {
+const getSingleNews = asyncHandler(async (req, res) => {
     const newsItem = await News.findById(req.params.id);
     if(!newsItem){
       res.status(404);
@@ -98,7 +98,7 @@ const deleteNews = asyncHandler(async (req, res) => {
 
 module.exports = {
     getNews,
-    getNew,
+    getSingleNews,
     createNews,
     deleteNews
 }
