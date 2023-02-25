@@ -62,7 +62,7 @@ export const programsSlice = createSlice({
         .addCase(getProgram.rejected, (state, action) => {
         state.isLoading = true
         state.isErrorProgram = true
-        state.message = action.payload
+        state.messageProgram = action.payload
         })
     }
 })

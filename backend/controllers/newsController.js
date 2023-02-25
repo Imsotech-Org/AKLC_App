@@ -15,6 +15,7 @@ const getNews = asyncHandler(async (req, res) => {
 // @desc  Get One news item
 // @route GET /api/v1/news/:id
 // @access Public
+
 const getNew = asyncHandler(async (req, res) => {
     const newsItem = await News.findById(req.params.id);
     if(!newsItem){
@@ -57,13 +58,16 @@ const createNews = asyncHandler(async (req, res) => {
         description,
     });
     
-      res.status(201).json(newNewsItem);
+    console.log(newNewsItem);
+
+    res.status(201).json(newNewsItem);
 });
 
 
 // @desc  Delete a news item
 // @route DELETE /api/v1/news/:id
 // @access Private
+
 const deleteNews = asyncHandler(async (req, res) => {
     let token
     let user

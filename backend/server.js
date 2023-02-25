@@ -18,6 +18,9 @@ app.use('/api/app/users', require('./routes/userRoutes'))
 // programs
 app.use('/api/app/programs', require('./routes/programsRoutes'));
 
+// news
+app.use('/api/app/news', require('./routes/newsRoutes'));
+
 // Serve Frontend
 // if (process.env.NODE_ENV === 'production') {
 //     // Set build folder as static
