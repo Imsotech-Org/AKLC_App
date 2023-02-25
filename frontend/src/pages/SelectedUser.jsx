@@ -22,7 +22,7 @@ const SelectedUser = () => {
   const {user, isError, isSuccess, isLoading, message} = useSelector((state) => state.auth);
   const {program} = useSelector((state) => state.programs);
 
-{/*
+
   useEffect(() => {
     if(!calledOnce){
       dispatch(getProgram(selectedUser.plan));
@@ -42,32 +42,6 @@ const SelectedUser = () => {
       }
     }
 }, []); 
-*/}
-
-useEffect(() => {
-  // Only fetch all users once, when the component mounts
-  if (!calledOnce) {
-    dispatch(getAll());
-  }
-  setCalledOnce(true);
-
-  // Set the selected user based on the URL parameter
-  for (let index = 0; index < users.length; index++) {
-    if (users[index]._id === id) {
-      setSelectedUser(users[index]);
-      break; // Stop the loop once the selected user is found
-    }
-  }
-}, [dispatch, calledOnce, id, users]);
-
-// When the selected user changes, fetch the program information for their plan
-useEffect(() => {
-  // Only fetch the program information once, when the selected user changes
-  if (selectedUser.plan && !calledOnce) {
-    dispatch(getProgram(selectedUser.plan));
-    setCalledOnce(true);
-  }
-}, [dispatch, selectedUser.plan, calledOnce]);
 
   return (
     <>
@@ -80,12 +54,27 @@ useEffect(() => {
       <button onClick={() => navigate(`/create-wourkout/${id}`)}>Create Workout Plan</button><br/>
       <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button><br/>
       <button onClick={() => navigate(`/create-goals/${id}`)}>Create Client Goals</button><br/>
-    </div>
+    
     <p>User Email: </p>
         <h3>{selectedUser.email}</h3>
         <p>User Plan:</p>
-        <h3>{program.title}</h3>
+        <h3>{program.title}</h3><br/>
 
+        <form style={{textAlign: 'left'}} >
+          {/*onSubmit={onSubmit}*/}
+            <label htmlFor="cAge">
+                Chronological Age:<br />
+                <input type="cAge" name="cAge" id="cAge" className="inputLogin" />
+                {/*value={chrage} onChange={onChange}*/}
+            </label><br />
+            <label htmlFor="bAge">
+                Biological Age:<br />
+                <input type="bAge" name="bAge" id="bAge" className="inputLogin" />
+                {/*value={bioage} onChange={onChange}*/}
+            </label><br/><br/>
+            <button >Update Ages</button>
+        </form>
+      </div>
     </>
   )
 }

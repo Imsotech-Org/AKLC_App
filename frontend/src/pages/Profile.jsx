@@ -33,32 +33,44 @@ const Profile = () => {
   return (
     <>
     <Topbar text="My Profile"/>
-    <div className="containerBasic">
-        <div style={{display: 'inline-block'}}>
+        
+        <div className="row">
+          <div className='column'>
+              <FaUserCircle className='col profilePicture'/>
+          </div>
+        
+          <div className='column'>
+              <p>User Name:</p>
+              <h3>{user.name}</h3>
 
-          <div >
-          <FaUserCircle className='col profilePicture'/>
+              <p>Chronologiocal Age: 00</p>
+
+              <p>Biological Age: 00</p>
           </div>
-          <div className='col ProfileHeader'>
-            <p>User Name:</p>
-            <h3>{user.name}</h3>
-          </div>
-          
         </div>
         
+        {/* 
+          <p>User Email: </p>
+          <h3>{user.email}</h3>
+        */}
 
-        <p>User Email: </p>
-        <h3>{user.email}</h3>
+        <div className='containerBasic'>
         <p>User Plan:</p>
         <h3>{program.title}</h3>
-        <button onClick={onSignOff}>Log Out</button>
+
+        <div style={{display: "inline-block"}}>
+        <button className="purpleButton" onClick={onSignOff}>Log Out</button>
         {
-          user.isAdmin && <button onClick={() => navigate('/admin-pannel')}>Admin Pannel</button>
+          user.isAdmin && <button className="purpleButton" onClick={() => navigate('/admin-pannel')}>Admin Pannel</button>
         }
         <br/>
-        <p>Health Goals</p>
+        </div>
+        </div>
 
-    </div>
+        <div className="containerBasic">
+        <h3>Health Goals</h3>
+        <hr/>
+        </div>
     </>
   )
 }
