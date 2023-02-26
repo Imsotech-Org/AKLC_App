@@ -1,6 +1,6 @@
-import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import * as React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import React, {useState, useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
@@ -8,11 +8,20 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
 import Topbar from '../components/Topbar';
+import { getUserNutritionPlan } from '../features/nutritionPlans/nutritionSlice';
+import { getAll } from '../features/auth/authSlice';
 
 
 const UserNutrition = () => {
 
+  const [calledOnce, setCalledOnce] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
   const {user} = useSelector((state) => state.auth);
+  const {userNutritionPlan} = useSelector((state) => state.nutritionPlans);
+  
+  const dispatch = useDispatch();
+
 
   const [value, setValue] = React.useState('1');
 
@@ -20,6 +29,12 @@ const UserNutrition = () => {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    if(!calledOnce){
+      dispatch(getUserNutritionPlan(user._id)).then(() => setIsLoading(false));
+    }
+    setCalledOnce(true);
+  }, [dispatch, user._id, calledOnce]);
 
   return (
     <>
@@ -37,8 +52,8 @@ const UserNutrition = () => {
               <Tab label="Schedule" value="2" />
           </TabList>
       </Box>
-      <TabPanel value="1">Overview component</TabPanel>
-      <TabPanel value="2">Schedule component</TabPanel>
+      <TabPanel value="1">Overview component<br/><p>{userNutritionPlan.overview}</p> </TabPanel>
+      <TabPanel value="2">Schedule component<br/><p>{userNutritionPlan.schedule}</p></TabPanel>
     </TabContext>
 
     </div>

@@ -25,8 +25,8 @@ const getUserNutritionPlan = asyncHandler(async (req, res) => {
     res.status(200).json(nutritionPlan);
 });
 
-// @desc  Create a News Item
-// @route POST /api/v1/news
+// @desc  Create a Nutrition Plan Item
+// @route POST /api/v1/nuritionPlans
 // @access Private
 const createNutritionPlan = asyncHandler(async (req, res) => {
     let token
@@ -52,7 +52,7 @@ const createNutritionPlan = asyncHandler(async (req, res) => {
         throw new Error('Please add schedule, overview, user');
     }
     
-    const newNutritionPlan = await News.create({
+    const newNutritionPlan = await NutritionPlans.create({
         schedule,
         overview, 
         client,

@@ -4,14 +4,14 @@ import nutritionService from './nutritionService';
 const initialState = {
     nutritionPlans: [],
     userNutritionPlan: {},
-    isErrorNews: false,
-    isSuccessNews: false,
+    isErrorNutrition: false,
+    isSuccessNutrition: false,
     isLoading: false,
-    messageNews: ''
+    messageNutrition: ''
 };
 
-// Get all news
-export const getNutritionPlans = createAsyncThunk('news/getAll', async (_, thunkAPI) => {
+// Get all nutritionPlans
+export const getNutritionPlans = createAsyncThunk('nutritionPlans/getAll', async (_, thunkAPI) => {
     try {
         return await nutritionService.getNutritionPlans();
     } catch (error) {
@@ -20,8 +20,8 @@ export const getNutritionPlans = createAsyncThunk('news/getAll', async (_, thunk
     }
 })
 
-// Get single news
-export const getUserNutritionPlan = createAsyncThunk('news/get', async (clientId, thunkAPI) => {
+// Get single nutritionPlan
+export const getUserNutritionPlan = createAsyncThunk('nutritionPlans/get', async (clientId, thunkAPI) => {
     try {
         return await nutritionService.getUserNutritionPlan(clientId);
     } catch (error) {
@@ -43,26 +43,26 @@ export const nutritionSlice = createSlice({
         })
         .addCase(getNutritionPlans.fulfilled, (state, action) => {
         state.isLoading = false
-        state.isSuccessNews = true
-        state.news = action.payload
+        state.isSuccessNutrition = true
+        state.nutritionPlans = action.payload
         })
         .addCase(getNutritionPlans.rejected, (state, action) => {
         state.isLoading = true
-        state.isErrorNews = true
-        state.messageNews = action.payload
+        state.isErrorNutrition = true
+        state.messageNutrition = action.payload
         })
         .addCase(getUserNutritionPlan.pending, (state) => {
         state.isLoading = true
         })
         .addCase(getUserNutritionPlan.fulfilled, (state, action) => {
         state.isLoading = false
-        state.isSuccessNews = true
-        state.newsSingle = action.payload
+        state.isSuccessNutrition = true
+        state.userNutritionPlan = action.payload
         })
         .addCase(getUserNutritionPlan.rejected, (state, action) => {
         state.isLoading = true
-        state.isErrorNews = true
-        state.messageNews = action.payload
+        state.isErrorNutrition = true
+        state.messageNutrition = action.payload
         })
     }
 })
