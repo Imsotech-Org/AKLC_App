@@ -48,7 +48,7 @@ export const workoutSlice = createSlice({
         state.isSuccessWorkout = true
         state.workoutPlans = action.payload
         })
-        .addCase(getworkoutPlans.rejected, (state, action) => {
+        .addCase(getWorkoutPlans.rejected, (state, action) => {
         state.isLoading = true
         state.isErrorWorkout = true
         state.messageWorkout = action.payload

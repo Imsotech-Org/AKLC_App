@@ -18,7 +18,7 @@ const getWorkoutPlanByUser = async (clientId) => {
     return response.data;
 }
 
-const nutritionService = {
+const workoutService = {
     getWorkoutPlans,
     getWorkoutPlanByUser,
   }
