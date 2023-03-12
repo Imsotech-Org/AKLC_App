@@ -71,6 +71,7 @@ const Profile = () => {
         <h3>Health Goals</h3>
         <hr/>
         </div>
+        {/*Enable scroll*/}
     </>
   )
 }

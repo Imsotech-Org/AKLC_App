@@ -25,7 +25,10 @@ app.use('/api/app/news', require('./routes/newsRoutes'));
 app.use('/api/app/nutritionPlans', require('./routes/nutritionPlansRoutes'));
 
 // workout plans
-app.use('/api/app/workoutPlans', require('./routes/workoutPlansRoutes'))
+app.use('/api/app/workoutPlans', require('./routes/workoutPlansRoutes'));
+
+// goals
+app.use('/api/app/goals', require('./routes/goalsRoutes'));
 
 // Serve Frontend
 // if (process.env.NODE_ENV === 'production') {

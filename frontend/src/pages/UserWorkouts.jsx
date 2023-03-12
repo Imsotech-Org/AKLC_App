@@ -8,6 +8,7 @@ const UserWorkouts = () => {
     <Topbar text="My Workout Strategy" backpage="/plans"/>
     <div className="containerBasic">
 
+      {/*make function with component instead?*/}
       <div className="workoutCard">
         <h3>Monday</h3>
         <p>lorem ipsum</p>
