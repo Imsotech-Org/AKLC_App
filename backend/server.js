@@ -24,6 +24,9 @@ app.use('/api/app/news', require('./routes/newsRoutes'));
 // nutritionPlans
 app.use('/api/app/nutritionPlans', require('./routes/nutritionPlansRoutes'));
 
+// workout plans
+app.use('/api/app/workoutPlans', require('./routes/workoutPlansRoutes'))
+
 // Serve Frontend
 // if (process.env.NODE_ENV === 'production') {
 //     // Set build folder as static

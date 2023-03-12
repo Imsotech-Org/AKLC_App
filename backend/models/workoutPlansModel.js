@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 
 const workoutPlanSchema = mongoose.Schema(
     {
-        user: {
+        client: {
             type: mongoose.Schema.Types.ObjectId,
             require: [true, "Please add user"],
             ref: 'User'
+        },
+        weekday: {
+            type: String,
         },
         title: {
             type: String,
