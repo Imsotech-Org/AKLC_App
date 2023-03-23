@@ -17,12 +17,13 @@ const getNutritionPlans = asyncHandler(async (req, res) => {
 // @access Public
 
 const getUserNutritionPlan = asyncHandler(async (req, res) => {
-    const nutritionPlan = await NutritionPlans.findById(req.params.id);
+    const nutritionPlan = await NutritionPlans.find({client: req.params.id});
     if(!nutritionPlan){
       res.status(404);
       throw new Error('User plan not found');
     }
     res.status(200).json(nutritionPlan);
+    console.log(nutritionPlan);
 });
 
 // @desc  Create a Nutrition Plan Item

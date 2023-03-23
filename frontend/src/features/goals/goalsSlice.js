@@ -3,7 +3,7 @@ import goalsService from './goalsService';
 
 const initialState = {
     goals: [],
-    userGoals: {},
+    userGoals: [],
     isErrorGoals: false,
     isSuccessGoals: false,
     isLoading: false,

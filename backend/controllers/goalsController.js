@@ -17,7 +17,7 @@ const getGoals = asyncHandler(async (req, res) => {
 // @access Public
 
 const getUserGoals = asyncHandler(async (req, res) => {
-    const goals = await Goals.findById(req.params.id);
+    const goals = await Goals.find({client: req.params.id});
     if(!goals){
       res.status(404);
       throw new Error('User goal not found');

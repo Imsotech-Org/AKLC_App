@@ -17,7 +17,7 @@ const getWorkoutPlans = asyncHandler(async (req, res) => {
 // @access Public
 
 const getWorkoutPlanByUser = asyncHandler(async (req, res) => {
-    const workoutPlan = await WorkoutPlans.findById(req.params.id);
+    const workoutPlan = await WorkoutPlans.find({client: req.params.id});
     if(!workoutPlan){
       res.status(404);
       throw new Error('User plans not found');

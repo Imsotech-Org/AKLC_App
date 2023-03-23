@@ -5,6 +5,8 @@ import { signOff, reset } from '../features/auth/authSlice';
 import {getProgram} from '../features/programs/programsSlice';
 import Topbar from '../components/Topbar';
 import {FaUserCircle} from 'react-icons/fa';
+import { getUserGoals } from '../features/goals/goalsSlice';
+
 
 const Profile = () => {
     const [calledOnce, setCalledOnce] = useState(false);
@@ -14,6 +16,9 @@ const Profile = () => {
   
     const {user, users, isError, isSuccess, isLoading, message} = useSelector((state) => state.auth);
     const {program} = useSelector((state) => state.programs);
+    const {userGoals} = useSelector((state) => state.goals);
+    
+    console.log(user._id);
 
     useEffect(() => {
       if(!calledOnce){
@@ -26,8 +31,14 @@ const Profile = () => {
       dispatch(signOff());
       dispatch(reset());
       navigate('/signIn');
-    }
+    };
 
+    useEffect(() => {
+      dispatch(getUserGoals(user._id));
+      console.log(userGoals);
+    }, [dispatch, user._id]);
+
+    console.log(userGoals);
 //obs:
 
   return (
@@ -70,6 +81,16 @@ const Profile = () => {
         <div className="containerBasic">
         <h3>Health Goals</h3>
         <hr/>
+          {userGoals && userGoals.length > 0 ? (
+            userGoals.map((item) => (
+              <div>
+                <p>{item.goalPeriod}</p>
+                <p>{item.goalDescription}</p>
+              </div>
+            ))
+          ) : (
+            <p>No health goals found.</p>
+          )}
         </div>
         {/*Enable scroll*/}
     </>

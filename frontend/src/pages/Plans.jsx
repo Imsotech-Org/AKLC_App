@@ -1,5 +1,7 @@
 import { width } from '@mui/system';
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {getUserNutritionPlan} from '../features/nutritionPlans/nutritionSlice';
 import {useNavigate } from 'react-router-dom';
 import fitnessIcon from '../assets/icons-logos/fitness-icon.png';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
@@ -9,6 +11,8 @@ import Topbar from '../components/Topbar';
 const Plans = () => {
 
   const navigate = useNavigate();
+  
+
   const clickCardNutrition = () => {
     navigate('/user-nutrition');
   }
@@ -18,6 +22,10 @@ const Plans = () => {
   const clickCardBioTracking = () => {
     navigate('/plans')
   }
+
+  useEffect(() => {
+
+  }, []);
 
   return (
     <>

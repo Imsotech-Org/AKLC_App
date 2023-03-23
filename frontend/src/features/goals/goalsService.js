@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = '/api/app/goalsPlans';
+const API_URL = '/api/app/goals';
 
 // Get all goals
 const getGoals = async () => {

@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import workoutService from './workoutService';
-
 //later: create another string call for all 7 plans from a single user
 
 const initialState = {
     workoutPlans: [],
-    workoutPlanByUser: {},
+    workoutPlanByUser: [],
     isErrorWorkout: false,
     isSuccessWorkout: false,
     isLoading: false,
