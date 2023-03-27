@@ -28,7 +28,7 @@ const CreateNutriotionPlan = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     dispatch(createNutritionPlan(planData));
-    //toast.success('Goal Created!');
+    //toast.success('Plan Created!');
   }
 
   return (
