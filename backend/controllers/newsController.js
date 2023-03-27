@@ -47,9 +47,9 @@ const createNews = asyncHandler(async (req, res) => {
 
     const {newsImage, title, description} = req.body;
 
-    if(!newsImage || !title || !description){
+    if(!title || !description){
         res.status(400);
-        throw new Error('Please add newsImage, title, description');
+        throw new Error('Please add title and description');
     }
     
     const newNewsItem = await News.create({

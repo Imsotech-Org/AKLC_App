@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const newsSchema = mongoose.Schema({
     newsImage: {
         type: String,
-        required: [true, "Please add a image name for News"],
+        //required: [true, "Please add a image name for News"],
     },
     title: {
         type: String,

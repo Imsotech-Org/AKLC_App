@@ -11,7 +11,7 @@ const CreateNewsFeed = () => {
   const navigate = useNavigate();
 
   const [newsData, setNewsData] = useState({
-    newsImage: 'teste',
+    newsImage: '',
     title: '',
     description: ''
   });
@@ -41,6 +41,8 @@ const CreateNewsFeed = () => {
 
       <BsImageFill/>
       <form onSubmit={onSubmit}>
+
+      {/*Add Img Input */}
 
       <label htmlFor="title"><br />
         Title:<br />
