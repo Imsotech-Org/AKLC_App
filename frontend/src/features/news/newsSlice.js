@@ -10,6 +10,17 @@ const initialState = {
     messageNews: ''
 };
 
+//create news
+export const createNews = createAsyncThunk('news/create', async (newsData, thunkAPI) => {
+    try {
+        const token = thunkAPI.getState().auth.user.token;
+        return await newsService.createNews(newsData, token);
+    } catch (error) {
+        const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+        return thunkAPI.rejectWithValue(message);
+    }
+})
+
 // Get all news
 export const getNews = createAsyncThunk('news/getAll', async (_, thunkAPI) => {
     try {
@@ -60,6 +71,19 @@ export const newsSlice = createSlice({
         state.newsSingle = action.payload
         })
         .addCase(getSingleNews.rejected, (state, action) => {
+        state.isLoading = true
+        state.isErrorNews = true
+        state.messageNews = action.payload
+        })
+        .addCase(createNews.pending, (state) => {
+        state.isLoading = true
+        })
+        .addCase(createNews.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.isSuccessNews = true
+        state.messageNews = action.payload
+        })
+        .addCase(createNews.rejected, (state, action) => {
         state.isLoading = true
         state.isErrorNews = true
         state.messageNews = action.payload
