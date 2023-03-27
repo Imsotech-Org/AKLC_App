@@ -1,0 +1,18 @@
+
+> Check comments inside code;
+> Check splash screen and extras on Figma design;
+
+FIGMA:
+ - Splash screen
+ - Sidebar
+
+NEWS:
+ - Add image
+ - Add news list on admin create news page
+ - delete news
+
+NUTRITION:
+ - Nutrition page crashes if user has no nutrition plan
+
+GOALS:
+ - Ensure only one goal can be created per period

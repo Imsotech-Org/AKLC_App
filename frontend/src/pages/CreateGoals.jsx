@@ -1,12 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {SlArrowLeft} from 'react-icons/sl';
 import Topbar from '../components/Topbar';
+import {createGoal} from '../features/goals/goalsSlice';
+import {useDispatch} from 'react-redux';
 
 const CreateGoals = () => {
 
   const {id} = useParams();
   const navigate = useNavigate();
+  
+  const [goalData, setGoalData] = useState({
+    client: `${id}`,
+    goalPeriod: '',
+    goalDescription: ''
+  })
+
+  const dispatch = useDispatch();
+
+  const onChange = (e) => {
+    setGoalData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(createGoal(goalData));
+    //toast.success('Goal Created!');
+  }
 
   return (
     <>
@@ -15,9 +38,9 @@ const CreateGoals = () => {
       <br/>
       <h1>Create Goals:</h1>
 
-      <form>
-        <label for="period">Select Goal Period: </label>
-         <select id="period" name="period">
+      <form onSubmit={onSubmit}>
+        <label htmlFor="goalPeriod">Select Goal Period: </label>
+         <select id="goalPeriod" name="goalPeriod" onChange={onChange}>
           <option value="three_m">Three Month Goals</option>
           <option value="six_m">Six Month Goals</option>
           <option value="one_y">One Year Goals</option>
@@ -31,9 +54,9 @@ const CreateGoals = () => {
          </select>
 
         <br/><br/>
-        <label htmlFor="goals">
+        <label htmlFor="goalDescription">
           Enter Goals: <br/>
-          <textarea name="goals" id="goals" style={{width: '90%'}} className='inputGeneral' rows="10"></textarea>
+          <textarea name="goalDescription" id="goalDescription" style={{width: '90%'}} className='inputGeneral' rows="10" onChange={onChange}></textarea>
         </label>
         
         <br/>

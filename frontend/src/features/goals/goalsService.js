@@ -18,9 +18,23 @@ const getUserGoals = async (clientId) => {
     return response.data;
 }
 
+// Create a goal
+const createGoal = async (goalData, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const response = await axios.post(API_URL, goalData, config);
+    
+    return response.data;
+}
+
 const goalsService = {
     getGoals,
     getUserGoals,
+    createGoal,
   }
 
 export default goalsService;

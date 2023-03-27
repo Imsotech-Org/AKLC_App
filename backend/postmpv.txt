@@ -1,8 +1,0 @@
-NEWS:
- - Add image
- - Add news list on admin create news page
- - delete news
-
-NUTRITION:
- - Nutrition page crashes if user has no nutrition plan
- 
