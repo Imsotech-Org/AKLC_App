@@ -13,6 +13,9 @@ NEWS:
 
 NUTRITION:
  - Nutrition page crashes if user has no nutrition plan
+ - Ensure only one plan can be created per user
+
 
 GOALS:
  - Ensure only one goal can be created per period
+ - Delete goals

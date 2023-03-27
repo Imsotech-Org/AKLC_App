@@ -18,9 +18,22 @@ const getUserNutritionPlan = async (clientId) => {
     return response.data;
 }
 
+const createNutritionPlan = async (planData, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const response = await axios.post(API_URL, planData, config);
+    
+    return response.data;
+}
+
 const nutritionService = {
     getNutritionPlans,
     getUserNutritionPlan,
+    createNutritionPlan,
   }
 
 export default nutritionService;
