@@ -1,11 +1,12 @@
 import React from 'react'
-import Topbar from '../components/Topbar';
+import TopbarMain from '../components/TopbarMain';
 
 const Chat = () => {
   return (
     <>
-    <Topbar text="Chat"/>
-    <div>Chat</div>
+    <TopbarMain text="Chat"/>
+    <br/>
+    <div> Chat</div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Topbar from '../components/Topbar';
+import TopbarMain from '../components/TopbarMain';
 import { getNews } from '../features/news/newsSlice';
 import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,7 @@ const News = () => {
 
   return (
     <>
-    <Topbar text="My Resources"/>
+    <TopbarMain text="My Resources"/>
     <div className="containerBasic">
     {
       news.map((item) => {return (<div className='card'>

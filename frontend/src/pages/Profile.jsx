@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signOff, reset } from '../features/auth/authSlice';
 import {getProgram} from '../features/programs/programsSlice';
-import Topbar from '../components/Topbar';
+import TopbarMain from '../components/TopbarMain';
 import {FaUserCircle} from 'react-icons/fa';
 import { getUserGoals } from '../features/goals/goalsSlice';
 
@@ -43,7 +43,7 @@ const Profile = () => {
 
   return (
     <>
-    <Topbar text="My Profile"/>
+    <TopbarMain text="My Profile"/>
         
         <div className="row">
           <div className='column'>
@@ -53,7 +53,7 @@ const Profile = () => {
           <div className='column'>
               <p>User Name:</p>
               <h3>{user.name}</h3>
-
+              <br/>
               <p>Chronologiocal Age: 00</p>
 
               <p>Biological Age: 00</p>
@@ -84,8 +84,10 @@ const Profile = () => {
           {userGoals && userGoals.length > 0 ? (
             userGoals.map((item) => (
               <div>
-                <p>{item.goalPeriod}</p>
-                <p>{item.goalDescription}</p>
+                
+                <h4>+{item.goalPeriod}</h4>
+                <p className="goalstabs">{item.goalDescription}</p>
+                <br/>
               </div>
             ))
           ) : (

@@ -6,7 +6,7 @@ import {useNavigate } from 'react-router-dom';
 import fitnessIcon from '../assets/icons-logos/fitness-icon.png';
 import nutritionIcon from '../assets/icons-logos/nutrition-icon.png';
 import bioTracking from '../assets/icons-logos/bio-tracking-icon.png';
-import Topbar from '../components/Topbar';
+import TopbarMain from '../components/TopbarMain';
 
 const Plans = () => {
 
@@ -29,7 +29,7 @@ const Plans = () => {
 
   return (
     <>
-    <Topbar text="My A+ Game"/>
+    <TopbarMain text="My A+ Game"/>
     <div className="containerBasic">
 
       <div className="card" onClick={clickCardWorkouts}>

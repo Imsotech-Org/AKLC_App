@@ -2,21 +2,24 @@
 > Check comments inside code;
 > Check splash screen and extras on Figma design;
 
--> 
+-> ?
+-> Dropdowns Name Fixing
+ MPV -> FIX css
+
+CREATE PLANS PAGE
 
 ADMIN PAGE/SIDE:
  - Change "Create" to "Edit"
- - Add age to users
- - ADD ERROR MESSAGES ON CRUD FUNCTIONS
+ MPV - Add age to users
+ MPV Try - ADD ERROR MESSAGES ON CRUD FUNCTIONS
 
 FIGMA:
  - Splash screen
- - Sidebar
 
 NEWS:
- - Add image
+ MPV - Add image
  - Add news list on admin create news page
- - delete news
+ MPV - delete news
  - edit button on news feed for the admin side
 
 NUTRITION:
@@ -25,9 +28,9 @@ NUTRITION:
 
 
 GOALS:
- - Ensure only one goal can be created per period
- - Delete goals
- - Change display names for period
+ MPV Try - Ensure only one goal can be created per period
+ MPV Try - Delete goals
+ MPV - Change display names for period
 
 WORKOUTS:
- - Ensure only one workout can be created per weekday
+ MPV Try - Ensure only one workout can be created per weekday
