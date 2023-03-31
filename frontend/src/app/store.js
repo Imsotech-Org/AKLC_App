@@ -5,6 +5,7 @@ import newsReducer from '../features/news/newsSlice';
 import nutritionReducer from '../features/nutritionPlans/nutritionSlice';
 import workoutReducer from '../features/workoutPlans/workoutSlice';
 import goalsReducer from '../features/goals/goalsSlice';
+import ageReducer from '../features/age/ageSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     nutritionPlans: nutritionReducer,
     workoutPlans: workoutReducer,
     goals: goalsReducer,
+    age: ageReducer,
 
   },
 });

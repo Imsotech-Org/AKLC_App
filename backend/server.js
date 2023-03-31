@@ -30,6 +30,9 @@ app.use('/api/app/workoutPlans', require('./routes/workoutPlansRoutes'));
 // goals
 app.use('/api/app/goals', require('./routes/goalsRoutes'));
 
+// age
+app.use('/api/app/age', require('./routes/ageRoutes'));
+
 // Serve Frontend
 // if (process.env.NODE_ENV === 'production') {
 //     // Set build folder as static

@@ -7,12 +7,13 @@
  MPV -> FIX css: dropdowns
  MVP -> Sidemenu links fix
 
+ Fix Sidemenu css
+
  TURN GRAY BOXES TO A FLEXIBLE FORMAT THAT CAN ADAPT -> use codepen
 
- MVP CREATE PLANS PAGE
+ MVP - CREATE PLANS PAGE
+ MVP - Add correct toats
 
-PROFILE PAGE:
- MVP - Enable scroll
 
 ADMIN PAGE/SIDE:
  - Change "Create" to "Edit"
@@ -33,10 +34,15 @@ NUTRITION:
  - Ensure only one plan can be created per user
 
 
+
 GOALS:
  MPV Try - Ensure only one goal can be created per period
  MPV Try - Delete goals
  MPV - Change display names for period
+
+ > if description !null -> display item.three_m etc...
+
+ > findById && goal_period???
 
 WORKOUTS:
  MPV Try - Ensure only one workout can be created per weekday

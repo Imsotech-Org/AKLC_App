@@ -4,6 +4,7 @@ import {SlArrowLeft} from 'react-icons/sl';
 import Topbar from '../components/Topbar';
 import {createGoal} from '../features/goals/goalsSlice';
 import {useDispatch} from 'react-redux';
+import { toast } from 'react-toastify';
 
 const CreateGoals = () => {
 
@@ -28,7 +29,11 @@ const CreateGoals = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     dispatch(createGoal(goalData));
-    //toast.success('Goal Created!');
+    
+    if (goalData.goalPeriod !== '') {
+      //toast('Goal Created!');
+      return;
+    }
   }
 
   return (
