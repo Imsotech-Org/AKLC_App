@@ -51,9 +51,9 @@ const SelectedUser = () => {
       <br/>
       <p>Selected User: {selectedUser.name}</p><br/>
       
-      <button onClick={() => navigate(`/create-wourkout/${id}`)}>Create Workout Plan</button><br/>
-      <button onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button><br/>
-      <button onClick={() => navigate(`/create-goals/${id}`)}>Create Client Goals</button><br/>
+      <button className="signInButton" onClick={() => navigate(`/create-wourkout/${id}`)}>Create Workout Plan</button><br/>
+      <button className="signInButton" onClick={() => navigate(`/create-nutrition/${id}`)}>Create Nutrition Plan</button><br/>
+      <button className="signInButton" onClick={() => navigate(`/create-goals/${id}`)}>Create Client Goals</button><br/>
     
     <p>User Email: </p>
         <h3>{selectedUser.email}</h3>
@@ -72,7 +72,7 @@ const SelectedUser = () => {
                 <input type="bAge" name="bAge" id="bAge" className="inputLogin" />
                 {/*value={bioage} onChange={onChange}*/}
             </label><br/><br/>
-            <button >Update Ages</button>
+            <button className="signInButton">Update Ages</button>
         </form>
       </div>
     </>

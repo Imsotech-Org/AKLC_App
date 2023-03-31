@@ -35,15 +35,15 @@ const CreateNutriotionPlan = () => {
     <>
     <Topbar text="Client Nutrition Plan" backpage={`/selected-user/${id}`}/>
     <div className="containerBasic">
-
+      <br/>
       <h1>Create Nutrition Plan</h1>
-
+      <br/>
       <form onSubmit={onSubmit}>
        <label htmlFor="overview">
           Overview:<br />
           <textarea name="overview" id="overview" style={{width: '90%'}} className='inputGeneral' rows="10" onChange={onChange}></textarea>
         </label><br />
-
+        <br/>
         <label htmlFor="schedule">
           Schedule:<br />
           <textarea name="schedule" id="schedule" style={{width: '90%'}} className='inputGeneral' rows="10" onChange={onChange}></textarea>
@@ -51,7 +51,7 @@ const CreateNutriotionPlan = () => {
 
         <input type="datetime" name="datePlan" id="datePlan" hidden />
 
-        <button>Complete and Submit</button>
+        <button className="signInButton">Complete and Submit</button>
       </form>
 
     </div>

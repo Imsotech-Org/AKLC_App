@@ -4,9 +4,15 @@
 
 -> ?
 -> Dropdowns Name Fixing
- MPV -> FIX css
+ MPV -> FIX css: dropdowns
+ MVP -> Sidemenu links fix
 
-CREATE PLANS PAGE
+ TURN GRAY BOXES TO A FLEXIBLE FORMAT THAT CAN ADAPT -> use codepen
+
+ MVP CREATE PLANS PAGE
+
+PROFILE PAGE:
+ MVP - Enable scroll
 
 ADMIN PAGE/SIDE:
  - Change "Create" to "Edit"

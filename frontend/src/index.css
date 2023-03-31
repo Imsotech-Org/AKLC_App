@@ -60,6 +60,18 @@ hr {
   position: relative;
   overflow: auto;
 }
+.containerBasicText {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 100%;
+  text-align: start;
+  position: relative;
+  overflow: auto;
+  padding: 0rem 3rem;
+}
 
 .containerBasicHorizontal {
   /* HAS TO BE EDITED */
@@ -95,6 +107,8 @@ hr {
   border: 0px solid lightgray;
   background-color: lightgray;
   width: 11rem;
+  list-style-type: none;
+  margin: 10px;
 }
 
 .inputGeneral {
@@ -111,6 +125,8 @@ hr {
   border: 0px solid lightgray;
   background-color: #502C49;
   width: 12rem;
+  color: white;
+  margin: 10px;
 }
 
 .purpleButton{

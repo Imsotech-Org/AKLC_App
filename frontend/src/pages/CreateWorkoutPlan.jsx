@@ -35,10 +35,10 @@ const CreateWorkoutPlan = () => {
   return (
     <>
     <Topbar text="Client Workout Plan" backpage={`/selected-user/${id}`}/>
-    <div>
+    <div className="containerBasic">
       <br/>
       <h1>Custom Workout Entry:</h1>
-
+      <br/>
       <form onSubmit={onSubmit}>
         <label for="weekday">Select Day: </label>
          <select id="weekday" name="weekday" onChange={onChange}>
@@ -67,7 +67,7 @@ const CreateWorkoutPlan = () => {
         <input type="datetime" name="datePlan" id="datePlan"  hidden/>
         
         <br/>
-        <button>Complete and Submit</button>
+        <button className="signInButton">Complete and Submit</button>
       </form>
 
     </div>

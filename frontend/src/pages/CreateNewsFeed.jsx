@@ -35,7 +35,7 @@ const CreateNewsFeed = () => {
     <>
     <Topbar text="Create Post" backpage="/admin-pannel"/>
     <div className="containerBasic">
-      <button onClick={() => navigate('/admin-pannel')}><SlArrowLeft/></button>
+    <br/>
       <p>Create News Feed</p>
 
 
@@ -46,20 +46,21 @@ const CreateNewsFeed = () => {
 
       <label htmlFor="title"><br />
         Title:<br />
-        <input type="text" name="title" id="title" onChange={onChange}/>
+        <input type="text" name="title" id="title" onChange={onChange} className="inputLogin"/>
       </label>
       <label htmlFor="description"><br />
         Description:<br />
-        <textarea name="description" id="description" cols="30" rows="10" onChange={onChange}></textarea>
+        <textarea name="description" id="description" cols="30" rows="10" onChange={onChange} className='inputGeneral'></textarea>
       </label><br />
 
       <input type="datetime" name="datePlan" id="datePlan" hidden />
       
-      <button>Post</button>
+      <button className="purpleButton">Post</button>
 
       </form>
 
-      <p>Previous Posts</p>
+      <br/>
+      <p>?Previous Posts:</p>
     </div>
     </>
   )

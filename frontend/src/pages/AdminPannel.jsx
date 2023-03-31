@@ -26,15 +26,20 @@ const AdminPannel = () => {
     <Topbar text="Admin Dashboard" backpage="/"/>
     <div className="containerBasic">
         {/*<button onClick={() => navigate('/')}><SlArrowLeft/></button>*/}
+        <br/>
         <h1>Admin Panel</h1>
-        <p>Create News Feed</p>
-        <button onClick={() => navigate("/create-news")}>New Feed</button>
-        <p>Show All users that have plans</p>
+        <br/>
+        <p><b>Create News Feed:</b></p>
+        
+        <button onClick={() => navigate("/create-news")} className="purpleButton">New Feed</button>
+
+        <br/>
+        <p><b>Client List:</b></p>
         <ul>
             {
                 users.map((item, index) => {
                     if(item.hasPaid){
-                        return <li key={index} onClick={() => navigate(`/selected-user/${item._id}`)} style={{backgroundColor: 'lightgray', margin: '1rem', cursor: 'pointer'}}>{item.name}</li>
+                        return <li key={index} onClick={() => navigate(`/selected-user/${item._id}`)} className="inputLogin">{item.name}</li>
                     }else{
                         return ""
                     }

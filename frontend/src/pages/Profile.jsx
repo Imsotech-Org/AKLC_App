@@ -45,7 +45,7 @@ const Profile = () => {
     <>
     <TopbarMain text="My Profile"/>
         
-        <div className="row">
+        <div className="row" style={{backgroundColor: "lightgray"}}>
           <div className='column'>
               <FaUserCircle className='col profilePicture'/>
           </div>
@@ -65,7 +65,7 @@ const Profile = () => {
           <h3>{user.email}</h3>
         */}
 
-        <div className='containerBasic'>
+        <div className='containerBasic' style={{backgroundColor: "lightgray"}}>
         <p>User Plan:</p>
         <h3>{program.title}</h3>
 
@@ -78,12 +78,16 @@ const Profile = () => {
         </div>
         </div>
 
+        <br/>
+
         <div className="containerBasic">
         <h3>Health Goals</h3>
+        </div>
+
         <hr/>
           {userGoals && userGoals.length > 0 ? (
             userGoals.map((item) => (
-              <div>
+              <div className="containerBasicText">
                 
                 <h4>+{item.goalPeriod}</h4>
                 <p className="goalstabs">{item.goalDescription}</p>
@@ -93,7 +97,7 @@ const Profile = () => {
           ) : (
             <p>No health goals found.</p>
           )}
-        </div>
+        
         {/*Enable scroll*/}
     </>
   )

@@ -34,10 +34,10 @@ const CreateGoals = () => {
   return (
     <>
     <Topbar text="Client Goals" backpage={`/selected-user/${id}`}/>
-    <div>
+    <div className="containerBasic">
       <br/>
       <h1>Create Goals:</h1>
-
+      <br/>
       <form onSubmit={onSubmit}>
         <label htmlFor="goalPeriod">Select Goal Period: </label>
          <select id="goalPeriod" name="goalPeriod" onChange={onChange}>
@@ -60,7 +60,7 @@ const CreateGoals = () => {
         </label>
         
         <br/>
-        <button>Complete and Submit</button>
+        <button className="signInButton">Complete and Submit</button>
       </form>
 
     </div>
