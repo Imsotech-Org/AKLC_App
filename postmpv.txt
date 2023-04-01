@@ -33,7 +33,8 @@ NUTRITION:
  - Nutrition page crashes if user has no nutrition plan
  - Ensure only one plan can be created per user
 
-
+AGES:
+MVP - make frontend edit and display
 
 GOALS:
  MPV Try - Ensure only one goal can be created per period

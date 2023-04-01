@@ -13,21 +13,27 @@ import { useNavigate } from 'react-router-dom';
 import { fontWeight } from '@mui/system';
 import { Typography } from '@mui/material';
 import '../index.css';
+import { signOff, reset } from '../features/auth/authSlice';
+import {useSelector, useDispatch} from 'react-redux';
+
 
 const DrawerMain = ({ open, onClose }) => {
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    // Add logout code here
-    console.log("Logout clicked");
+  const onSignOff = () => {
+    dispatch(signOff());
+    dispatch(reset());
+    navigate('/signIn');
   };
+
 
   const drawerItems = [ 
     { text: "Home", onClick: () => navigate('/') },
     { text: "Life Center Programs", onClick: () => navigate('/all-plans') },
     { text: "Longevity Network", href: "https://www.google.com" },
-    { text: "Log out", onClick: handleLogout }
+    { text: "Log out", onClick: onSignOff }
     //link website
   ];
 
