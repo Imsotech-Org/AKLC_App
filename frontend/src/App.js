@@ -16,6 +16,7 @@ import CreateWorkoutPlan from './pages/CreateWorkoutPlan';
 import CreateGoals from './pages/CreateGoals';
 import UserNutrition from './pages/UserNutrition';
 import UserWorkouts from './pages/UserWorkouts';
+import LifeCenter from './pages/LifeCenter';
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path='/chat' element={<PrivateRoute/>}>
               <Route path='/chat' element={<Chat/>}/>
+            </Route>
+            <Route path='/lifecenter' element={<PrivateRoute/>}>
+              <Route path='/lifecenter' element={<LifeCenter/>}/>
             </Route>
 
             <Route path='/create-news' element={<PrivateRoute/>}>

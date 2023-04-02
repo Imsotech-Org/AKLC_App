@@ -6,6 +6,7 @@ import {SlArrowLeft} from 'react-icons/sl';
 import Topbar from '../components/Topbar';
 import {getProgram} from '../features/programs/programsSlice';
 import {FaUserCircle} from 'react-icons/fa';
+import {createAge} from '../features/age/ageSlice';
 
 const SelectedUser = () => {
 
@@ -15,6 +16,11 @@ const SelectedUser = () => {
   const [calledOnce, setCalledOnce] = useState(false);
   const [selectedUser, setSelectedUser] = useState({});
 
+  const [ageData, setAgeData] = useState({
+    client: `${id}`,
+    chronologicalAge: '',
+    biologicalAge: ''
+  })
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -43,6 +49,18 @@ const SelectedUser = () => {
     }
 }, []); 
 
+  const onChange = (e) => {
+    setAgeData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(createAge(ageData));
+  }
+
   return (
     <>
     <Topbar text={"Client: " + selectedUser.name} backpage="/admin-pannel"/>
@@ -60,17 +78,14 @@ const SelectedUser = () => {
         <p>User Plan:</p>
         <h3>{program.title}</h3><br/>
 
-        <form style={{textAlign: 'left'}} >
-          {/*onSubmit={onSubmit}*/}
-            <label htmlFor="cAge">
+        <form style={{textAlign: 'left'}} onSubmit={onSubmit}>
+            <label htmlFor="chronologicalAge">
                 Chronological Age:<br />
-                <input type="cAge" name="cAge" id="cAge" className="inputLogin" />
-                {/*value={chrage} onChange={onChange}*/}
+                <input type="chronologicalAge" name="chronologicalAge" id="chronologicalAge" className="inputLogin" onChange={onChange}/>
             </label><br />
-            <label htmlFor="bAge">
+            <label htmlFor="biologicalAge">
                 Biological Age:<br />
-                <input type="bAge" name="bAge" id="bAge" className="inputLogin" />
-                {/*value={bioage} onChange={onChange}*/}
+                <input type="biologicalAge" name="biologicalAge" id="biologicalAge" className="inputLogin" onChange={onChange}/>
             </label><br/><br/>
             <button className="signInButton">Update Ages</button>
         </form>

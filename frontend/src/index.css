@@ -181,3 +181,60 @@ hr {
 .ListItemButton .buttonWhite .MuiListItemText-primary {
   font-family: 'Josefin Sans', sans-serif;
 }
+
+.productContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  overflow: auto;
+  padding-bottom: 4rem;
+  padding-left : 2rem;
+  padding-right : 2rem;
+}
+.productContainer img {
+  width: 10rem;
+  height: 12rem;
+  border-radius: 20px;
+  margin: 1rem;
+  float: left;
+  overflow: auto;
+  
+}
+.productInfo{
+  display: inline-block;
+}
+.productInfo h3 {
+  font-size: 40px;
+}
+.productInfo h4 {
+  font-size: 36px;
+}
+.productInfo p {
+  color: var(--secondary-color);
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+.productInfo ul {
+  font-size: 20px;
+  color: #502c49;
+}
+.productInfo .productInfoBtn {
+  height: 3rem;
+  border: none;
+  background-color: var(--ternary-color);
+  color: var(--main-background);
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.productInfo .productInfoBtn:hover{
+  border: 2px solid var(--ternary-color);
+  background-color: #363d1000;
+  color: var(--ternary-color);
+  transform: scale(105%);
+}

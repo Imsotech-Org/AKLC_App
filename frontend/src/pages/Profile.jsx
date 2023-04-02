@@ -6,7 +6,7 @@ import {getProgram} from '../features/programs/programsSlice';
 import TopbarMain from '../components/TopbarMain';
 import {FaUserCircle} from 'react-icons/fa';
 import { getUserGoals } from '../features/goals/goalsSlice';
-
+import {getUserAge} from '../features/age/ageSlice';
 
 const Profile = () => {
     const [calledOnce, setCalledOnce] = useState(false);
@@ -17,8 +17,11 @@ const Profile = () => {
     const {user, users, isError, isSuccess, isLoading, message} = useSelector((state) => state.auth);
     const {program} = useSelector((state) => state.programs);
     const {userGoals} = useSelector((state) => state.goals);
-    
+    const {userAge} = useSelector((state) => state.age);
+
+
     console.log(user._id);
+    console.log(userAge);
 
     useEffect(() => {
       if(!calledOnce){
@@ -35,11 +38,13 @@ const Profile = () => {
 
     useEffect(() => {
       dispatch(getUserGoals(user._id));
+      dispatch(getUserAge(user._id));
       console.log(userGoals);
+      console.log(userAge);
+      console.log(user._id)
     }, [dispatch, user._id]);
 
-    console.log(userGoals);
-//obs:
+
 
   return (
     <>
@@ -54,9 +59,8 @@ const Profile = () => {
               <p>User Name:</p>
               <h3>{user.name}</h3>
               <br/>
-              <p>Chronologiocal Age: 00</p>
-
-              <p>Biological Age: 00</p>
+              <p>Chronologiocal Age: {userAge.chronologicalAge}</p>
+              <p>Biological Age: {userAge.biologicalAge}</p>
           </div>
         </div>
         

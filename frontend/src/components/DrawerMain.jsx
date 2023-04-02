@@ -31,8 +31,8 @@ const DrawerMain = ({ open, onClose }) => {
 
   const drawerItems = [ 
     { text: "Home", onClick: () => navigate('/') },
-    { text: "Life Center Programs", onClick: () => navigate('/all-plans') },
-    { text: "Longevity Network", href: "https://www.google.com" },
+    { text: "Life Center Programs", onClick: () => navigate('/lifecenter') },
+    { text: "Longevity Network", href: "https://www.kolasko.com" },
     { text: "Log out", onClick: onSignOff }
     //link website
   ];

@@ -5,14 +5,12 @@
 -> ?
 -> Dropdowns Name Fixing
  MPV -> FIX css: dropdowns
- MVP -> Sidemenu links fix
 
  Fix Sidemenu css
 
  TURN GRAY BOXES TO A FLEXIBLE FORMAT THAT CAN ADAPT -> use codepen
 
- MVP - CREATE PLANS PAGE
- MVP - Add correct toats
+ MVP - Add correct toasts
 
 
 ADMIN PAGE/SIDE:
