@@ -238,3 +238,7 @@ hr {
   color: var(--ternary-color);
   transform: scale(105%);
 }
+
+input[type="file"]  {
+  display: none;
+}

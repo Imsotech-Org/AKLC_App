@@ -9,7 +9,7 @@ const createNews = async (newsData, token) => {
             Authorization: `Bearer ${token}`
         }
     }
-
+    console.log("SERVICE IMAGE:", newsData);
     const response = await axios.post(API_URL, newsData, config);
 
     return response.data;

@@ -1,17 +1,29 @@
+!!!!! FINAL PRE MVP !!!!!
+
+> CHAT
+
+F> Add Images; embed videos on News
+
+>> Delete and Edit functions
+
+F> Fix AGES -> Make it display on profile; Edit function on admin panel
+
+>> Fix dropdowns names, CSS LATER ONLy
+
+MVP RIGHT AFTER:
+
+>Ensure only one workout can be created per weekday
+> Add correct toasts
+
+POST MVP:
 
 > Check comments inside code;
 > Check splash screen and extras on Figma design;
+> Fix Sidemenu css
 
--> ?
--> Dropdowns Name Fixing
- MPV -> FIX css: dropdowns
+> hide everything on browser version and just add a link to website
 
- Fix Sidemenu css
-
- TURN GRAY BOXES TO A FLEXIBLE FORMAT THAT CAN ADAPT -> use codepen
-
- MVP - Add correct toasts
-
+> TURN GRAY BOXES TO A FLEXIBLE FORMAT THAT CAN ADAPT -> use codepen
 
 ADMIN PAGE/SIDE:
  - Change "Create" to "Edit"
@@ -22,7 +34,6 @@ FIGMA:
  - Splash screen
 
 NEWS:
- MPV - Add image
  - Add news list on admin create news page
  MPV - delete news
  - edit button on news feed for the admin side
@@ -31,17 +42,16 @@ NUTRITION:
  - Nutrition page crashes if user has no nutrition plan
  - Ensure only one plan can be created per user
 
-AGES:
-MVP - make frontend edit and display
 
 GOALS:
- MPV Try - Ensure only one goal can be created per period
- MPV Try - Delete goals
- MPV - Change display names for period
+ MPV After - Ensure only one goal can be created per period
+ MPV - Delete goals
 
  > if description !null -> display item.three_m etc...
 
  > findById && goal_period???
+
+ > if theresAnValue -> edit not create
 
 WORKOUTS:
  MPV Try - Ensure only one workout can be created per weekday

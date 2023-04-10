@@ -14,6 +14,7 @@ const initialState = {
 export const createNews = createAsyncThunk('news/create', async (newsData, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token;
+        console.log("SLICE IMAGE:", newsData);
         return await newsService.createNews(newsData, token);
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();

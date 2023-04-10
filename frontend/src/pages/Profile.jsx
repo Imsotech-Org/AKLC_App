@@ -36,6 +36,7 @@ const Profile = () => {
       navigate('/signIn');
     };
 
+    //fix userAge
     useEffect(() => {
       dispatch(getUserGoals(user._id));
       dispatch(getUserAge(user._id));

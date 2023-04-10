@@ -29,6 +29,7 @@ const getSingleNews = asyncHandler(async (req, res) => {
 // @route POST /api/v1/news
 // @access Private
 const createNews = asyncHandler(async (req, res) => {
+    console.log("CONTROLLER IMAGE CALLED");
     let token
     let user
 
@@ -40,10 +41,7 @@ const createNews = asyncHandler(async (req, res) => {
         user = await User.findById(decoded.id).select('-password');
     }
 
-    if(!user.isAdmin) {
-        res.status(401);
-        throw new Error('User not authorized for function');
-    }
+    
 
     const {newsImage, title, description} = req.body;
 
@@ -59,6 +57,7 @@ const createNews = asyncHandler(async (req, res) => {
     });
     
     console.log(newNewsItem);
+    console.log("CONTROLLER IMAGE:", newsImage);
 
     res.status(201).json(newNewsItem);
 });
